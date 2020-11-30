@@ -275,12 +275,6 @@ func (f *FlagSet) SetOutput(output io.Writer) {
 	f.output = output
 }
 
-// SetOutput sets the destination for usage and error messages.
-// If output is nil, os.Stderr is used.
-func (f *FlagSet) GetOutput() (output io.Writer) {
-	return f.output
-}
-
 // VisitAll visits the flags in lexicographical order or
 // in primordial order if f.SortFlags is false, calling fn for each.
 // It visits all flags, even those not set.
